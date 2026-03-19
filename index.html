@@ -14,3 +14,16 @@
     <spline-viewer url="./scene_falsecolor.splinecode" events-target="global"></spline-viewer>
 </body>
 </html>
+<script type="module">
+  // This script looks for the logo and removes it from the view
+  const removeMark = setInterval(() => {
+    const viewer = document.querySelector('spline-viewer');
+    if (viewer && viewer.shadowRoot) {
+      const logo = viewer.shadowRoot.querySelector('#logo');
+      if (logo) {
+        logo.remove();
+        clearInterval(removeMark); // Stop the search once the mark is gone
+      }
+    }
+  }, 10);
+</script>
