@@ -12,9 +12,8 @@
 <body>
     <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
     <spline-viewer url="./scene_falsecolor.splinecode" events-target="global"></spline-viewer>
-</body>
-</html>
-<script type="module">
+
+    <script type="module">
   // This script looks for the logo and removes it from the view
   const removeMark = setInterval(() => {
     const viewer = document.querySelector('spline-viewer');
@@ -27,3 +26,5 @@
     }
   }, 10);
 </script>
+</body>
+
